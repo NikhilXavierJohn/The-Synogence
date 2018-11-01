@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="Background">
+    <file>Ui_Background.png</file>
+  </qresource>
+  <qresource prefix="Logo">
+    <file>synogence logo_text.png</file>
+  </qresource>
+</RCC>

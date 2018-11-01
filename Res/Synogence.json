@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "synogence-2018",
+  "private_key_id": "6d4f381f36158743b04ec4eda757218fc2b084b8",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCKm2H9u3vScPOj\n6mBqGFBoipVi87dGNz46AFHtzgJPWdiq+nSTk0T8tlwyQGH+b6tUGYXX7D0N5XwR\naaO/bCJh/EBOUQQephj7q1nm7NCPRSJ3M47xjZfaER60v0y9GwN8iBIUVel6W12K\nFELFFV6yFXrIoJQ5pysiMxY1sh4AzUA81R9z0RGpzSfm5MQDd8xm0YOjJHEuCGbd\nNmXqeJ2YQesaJBPQUyG5iI8dkr95dfu8AOK+z95xnIflrzPNB/GAvT0TDIO0LVov\nwuC+ifqEgI6Qv8QwYbrGAsdRlYDcNmkOT0mqoiBV8/z85pJtjrJpPrvFDDgTfrKT\nFYX783APAgMBAAECggEAO3DBSDfDtQ6dXXkgmb8NlJeB0uqjeSgttl/2wp2rHe5w\n3XoEzljEp/9ocGBt5dhrx+geHuf/ktsMJsd/4pJz+ENeLHfP5Xjjk+H67u41zose\nabIhpfNL4MegvHChbyOLjjcoUbI6Ky/NYG6p56zvbD2L50f96O+IruTrrGFTPpIl\nVtEBGlhQM3oNrl7DpSCzwEz5+jp+UiUK8Bp6+WOf+RTu0YM0UkNdj7oJFd20FM7g\nH79i87xbWPNBOR5IweUINgHt/aZXMGvWR0CWH3MFXAmdSnICqrldruV18xLvMkhq\nzMlUMx1bf3yCCeqh4YG/OiiqrmkCunXCzBL3ncZ8YQKBgQDAExJ/7AIc49GQPWgm\n61to90GTCY6G7vUwnIlJ2ukaPOVc37GCRUGxG0b6fRcz8g7EyeFkOPADu6VW7a67\n9EYepAbMO26fKl7k6cxVM3Ocpn1NaxWV4i3JPAIMrJwaUDFKYfB2IP730pEpOUVB\nUtf5EDBQ6meP6hPMUHbgJdf8XwKBgQC4vNOAmBv0xCP4SIVGoFQNg25KLqCA4Vfd\nCmvFryYO80umlwvelJJEDr5AyD52a13zoszA5/Hqh6IdTLeb2g1vHMgvPsdkt9Ue\nihjtUNX/SoQKFaF2fDhB4Bsnol7E0ex2OWrePtTlMTdmuFaeQ0vhovJyL5Wppr1e\nBd3pGOsqUQKBgCoEAgf5mHy5WR40UJQy58wOSknfzU229+uqUl3VhSg4KfQm+q2E\neNpFHUGuG2VBjfl+L8+8pMQsR/67/30d8jjBqLsERS6MFjX87rW0i5W41bAZvJ8M\n2vcqKUiceYlIAYBD7FXq4dtUNGzQGlYvyQ6ye983Z3ATxEDtWROvM5ABAoGBALFs\n8XldHeR8CMvp4s7NJ0z/QQrQM2j0hG2QF6f6KwRK2Qp7oXO5n6zruAACEjOrtMVN\nQ3e2jNqiP6oCR4nQ5/wiWYU+t0RdZrt5CK3MaGtTRvNkiPmCHonuUkZDpN9FeuSl\nCqW/FLu3BC2Mt+wyWAuyc0YFu6j/sno+Cj5Yp2uxAoGBAJmcJZHXotw46A7dz3YK\nvQq6U7OLFNitSula+g6lRySO9l/2agexwE6ssoM+gZKMMAXks3c5Fj+jZ3Xi2oan\nobNdI4P3vvjuITXH9PMLHmwKquOCSGvkIn4XyvWazF9tn/AQc7r9msHe9MvEA6iY\nZ5qt/eirrA/0Qw1OskAtetjI\n-----END PRIVATE KEY-----\n",
+  "client_email": "synogence@synogence-2018.iam.gserviceaccount.com",
+  "client_id": "110518690542859088573",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/synogence%40synogence-2018.iam.gserviceaccount.com"
+}

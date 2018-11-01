@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "synogence-2018",
+  "private_key_id": "0e74c93fa588afe5aacbeefa1dfc931ae2d8535e",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCwGDCIv1achDgC\n9apDGGZpX4NbQbTGSFPQTA/yGqdgsTVwr7Y05+p5HIKglc7JPPC8rwfsaBAPB9Y+\n+ezSIWniqU76jybBnqGlVzwTlSkPY0qogiTIZ30hrH+Eu8icXM8qn+IOcDOxrAL4\nC62kA3PFqvlqYuQPGbBlHaitzHdamHq26EFWjw3o3nfbi8o8qy6MgQifvgABCIno\nC6tv4qnUhBRtmJ1sl0muSx/+gXcflCCPupy4+5trjO2z0UYNgGsH8tZHE90xEeTZ\nyGcoJavcQ9cxQ+SzcJT82gYXeePnEFMcIhlzjvZylKGlh4WkQganOxE8DvFIYRm8\nl8y1fkF9AgMBAAECggEAOoQvTKHYlDZTrpgYNiebkJSOv/p7qhBK2cMM4XT9/eGl\nUobxU29luU1CEz708mZv0SOQzHxgKb5+8Xp3ufQkjY+ZkSWUyW5/ZMQyUIeWl2h1\nXL2yn23UZSY/UcpdBajJpu5uXkHmy7nPWsH2t7P1+s+wBixKgMIWneNXNDnnx5Cq\nef8DVOylaGrFp97hQS0rGFy4Xjo1BhRRFM6DII1amQ8WnbahixD1o9GqKOIXD68Q\nK1mXS+e2XJFwJ26mYDtECqQb0wt0+DsjIN2RG/nE+3pgJeh7sIVUVEWHHlujIJxp\n570M1/mjDXETIk8lLe0GnBnH/Mdjn2Ke/AoOV8cNuQKBgQDi9JP2MsTdWKeH274K\nte1XnselPOOUhIgybKERnJWA9wvzc0WdIA6VnWeYlMsk4zi+0F0vN4Pteqv6Xzyu\njzc5HYGoRAkpU+55IGb7XW2eFOQxgdrDIxuR/quXmaNpfHVuJ0VnuhdQIIgYsaKo\nv7nMN93T5CEsXs8zQ2qX4I8mfwKBgQDGoVPIwRhhQ3PT06VMO5lHQ8XXBUDWjB6k\n6SRmobaWmtJ7PyWQrV2Z7++dAxydHh8mqYDljbRO+xufdcpig9amtuILrHyPqYJc\nj2g3Op22HnZKrL8ioioGhioo807m+4afaYfjD1HzfbSZ1xFHeWsX1q+YD9S/91gJ\ntP9Jc7QyAwKBgQC0le3BwaXZhjhPpu6xcQ74YDP1a9yeCVKh5MPI0rI3Gtwci4VB\nwAc6zzNmOkbmBBLb6cmrz12fMbP0FaGgN/616J+JdxFfHBSttrWanz2gwnjMV8ns\n6Vt/sIdyqmJXhhueWYslPPJd5HTGSVnnMh8xuuY8OtKWjp4J6UPAs4LUGwKBgFin\neuDYpowK8jCyf022MCSpsCzXcGgSJD9Qu+l+9iLkOVu/BII9jtB9UgJPeD78ScUU\n1K4ggEDcPSkABvPPikfgyqWROAtbCg9MBqTX6bp2gC+2SJ0pqf49daXPawEXdK/E\nB12l4dr+2VPstQ6kt9LtBHSnZDrGKCo0+diL5vqHAoGBAMaRlQ866ouevjxFIA9D\n4EwGioWxf1dmgmYVDZHnXlB8QQLQNlKAXhFLKfFc6Yc4PrwNBVz0fOTOPPKFYdzc\nK9ERVyx5TC/xZNfQ9sWJb+phIZvhS2GaNy5Krc7Bgh3Hj0wPlaQJKfoXQz+MnBwj\nAJmHsz/WlavR8ToQQerJJq/W\n-----END PRIVATE KEY-----\n",
+  "client_email": "nokiasynogence@synogence-2018.iam.gserviceaccount.com",
+  "client_id": "110010580500268629259",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/nokiasynogence%40synogence-2018.iam.gserviceaccount.com"
+}
