@@ -19,13 +19,13 @@ class Ui_Form(object):
         self.TranscribedText.setObjectName("TranscribedText")
         self.Transcribedlabel = QtWidgets.QLabel(Form)
         self.Transcribedlabel.setGeometry(QtCore.QRect(190, 160, 381, 20))
-        self.Transcribedlabel.setStyleSheet("font: 30pt \"Visionary Stairs\";\n"
+        self.Transcribedlabel.setStyleSheet("font: 25pt \"Visionary Stairs\";\n"
 "color: rgb(255, 255, 255);\n"
 "background-image: url(:/Logo/synogence logo_text.png);")
         self.Transcribedlabel.setObjectName("Transcribedlabel")
         self.headinglabel = QtWidgets.QLabel(Form)
         self.headinglabel.setGeometry(QtCore.QRect(160, 390, 441, 20))
-        self.headinglabel.setStyleSheet("font: 30pt \"Visionary Stairs\";\n"
+        self.headinglabel.setStyleSheet("font: 25pt \"Visionary Stairs\";\n"
 "color: rgb(255, 255, 255);")
         self.headinglabel.setObjectName("headinglabel")
         self.Headline = QtWidgets.QTextBrowser(Form)

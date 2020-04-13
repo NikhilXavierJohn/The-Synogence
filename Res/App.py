@@ -5,6 +5,7 @@ from pytube import YouTube
 import os
 import subprocess
 import time
+from shutil import copyfile
 import speech_recognition as sr
 
 
@@ -34,7 +35,7 @@ class Ui_MainWindow(object):
         self.stream=None
         self.audiofile=None
         self.msg=QMessageBox()
-        self.splitcommand="sox /home/nikhil/Nefarians/UI/Res/audio/out.wav /home/nikhil/Nefarians/UI/Res/split/split.wav silence 1 0.5 1% 1 1.5 1% : newfile : restart"
+        self.splitcommand="sox {}/audio/out.wav {}/split/split.wav silence 1 0.5 1% 1 1.5 1% : newfile : restart".format(str(os.getcwd()).replace("\\","/"),str(os.getcwd()).replace("\\","/"))
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.videoname=""
         self.centralwidget.setStyleSheet("")
@@ -128,9 +129,9 @@ class Ui_MainWindow(object):
         self.downloadtext.setText(_translate("MainWindow", "Browse"))
         self.browsebutton.setText(_translate("MainWindow", "Browse"))
 
-    def progress_Check(self,stream = None, chunk = None, file_handle = None, remaining = None):
-        percent = (100*(file_size-remaining))/file_size
-        self.progressBar.setProperty("value", percent)
+    # def progress_Check(self,stream = None, chunk = None, file_handle = None, remaining = None):
+    #     percent = (100*(file_size-remaining))/file_size
+    #     self.progressBar.setProperty("value", percent)
 
     def downloadnow(self):
         self.yt = YouTube(str(self.url.text()))
@@ -139,16 +140,16 @@ class Ui_MainWindow(object):
         self.stream=self.yt.streams.filter(subtype='mp4').first()
         # self.videoname= self.stream.default_filename
         #print(self.videoname)
-        self.stream.download("/home/nikhil/Nefarians/UI/Res/videos",filename="video")
+        self.stream.download("{}/videos".format(str(os.getcwd()).replace("\\","/")),filename="video")
         self.progressBar.setValue(0)
         self.newTitle="video.mp4"
-        #os.rename("/home/nikhil/Nefarians/UI/Res/videos/"+self.title+".mp4","/home/nikhil/Nefarians/UI/Res/videos/"+self.newTitle)
-        self.command="ffmpeg -i /home/nikhil/Nefarians/UI/Res/videos/video.mp4 -ab 160k -ac 2 -ar 44100 -vn /home/nikhil/Nefarians/UI/Res/audio/out.wav"
+        #os.rename("{}/videos/".format(str(os.getcwd()).replace("\\","/"))+self.title+".mp4","{}/videos/"+self.newTitle)
+        self.command="ffmpeg -i {}/videos/video.mp4 -ab 160k -ac 2 -ar 44100 -vn {}/audio/out.wav".format(str(os.getcwd()).replace("\\","/"),str(os.getcwd()).replace("\\","/"))
         # self.url.setText("")
         self.converter()
         # print("file has been successfully downloaded")
     
-    def return_progress(self, stream, chunk, file_handle, bytes_remaining):
+    def return_progress(self, stream, chunk, bytes_remaining):
         percentage = (1 - bytes_remaining / self.stream.filesize)*100
         self.progressBar.setValue(percentage)
         if(percentage==100):
@@ -162,22 +163,22 @@ class Ui_MainWindow(object):
         subprocess.call(self.splitcommand,shell=True)
         self.msg.setText("Removed Silences")
         self.msg.exec_()
-        files=os.listdir("/home/nikhil/Nefarians/UI/Res/split/")
+        files=os.listdir("{}/split/".format(str(os.getcwd()).replace("\\","/")))
         for i in files:
-            self.splitcommand="ffmpeg -i /home/nikhil/Nefarians/UI/Res/split/"+i+ " -f segment -segment_time 30 -c copy /home/nikhil/Nefarians/UI/Res/split/out%03d.wav"
+            self.splitcommand="ffmpeg -i {}/split/".format(str(os.getcwd()).replace("\\","/"))+i+ " -f segment -segment_time 30 -c copy {}/split/out%03d.wav".format(str(os.getcwd()).replace("\\","/"))
             subprocess.call(self.splitcommand,shell=True)
         self.msg.setText("Audio Split Every 30 Seconds")
         self.msg.exec_()
         for f in files:
             if(f.startswith("split")):
-                print("removing: /home/nikhil/Nefarians/UI/Res/split/"+f)
-                os.remove("/home/nikhil/Nefarians/UI/Res/split/"+f)
+                print("removing: {}/split/".format(str(os.getcwd()).replace("\\","/"))+f)
+                os.remove("{}/split/".format(str(os.getcwd()).replace("\\","/"))+f)
         self.msg.setText("Starting Transcription")
         self.msg.exec_()
         self.transcriber()
 
     def transcriber(self):
-        import transcribefast
+        import transcribe_fast
         self.msg.setText("Transcription Done")
         self.msg.exec_()
         self.msg.setText("Summarising And Categorizing Transcript")
@@ -188,10 +189,11 @@ class Ui_MainWindow(object):
         import prediction
         self.msg.setText("Click Ok to Display Output")
         self.msg.exec_()
-        subprocess.call("python3 -W ignore Outputwindow.py",shell=True)
+        subprocess.call("python -W ignore Outputwindow.py",shell=True)
 
 
     def converter(self):
+        self.command="ffmpeg -i {}/videos/video.mp4 -ab 160k -ac 2 -ar 44100 -vn {}/audio/out.wav".format(str(os.getcwd()).replace("\\","/"),str(os.getcwd()).replace("\\","/"))
         subprocess.call(self.command, shell=True)
         self.msg.setText("Converted To WAV!")
         self.msg.exec_()
@@ -206,14 +208,14 @@ class Ui_MainWindow(object):
         if self.fileName:
             self.link.setText(self.fileName)
             if(self.fileName.endswith(".wav")):
-                if(os.path.isfile("/home/nikhil/Nefarians/UI/Res/audio/out.wav")):
-                    subprocess.call("sudo rm /home/nikhil/Nefarians/UI/Res/audio/out.wav",shell=True)
-                os.rename(self.fileName,"/home/nikhil/Nefarians/UI/Res/audio/out.wav")
+                if(os.path.isfile("{}/audio/out.wav".format(str(os.getcwd()).replace("\\","/")))):
+                    os.remove("{}/audio/out.wav".format(str(os.getcwd()).replace("\\","/")))
+                copyfile(self.fileName,"{}/audio/out.wav".format(str(os.getcwd()).replace("\\","/")))
                 time.sleep(2)
             elif(self.fileName.endswith(".mp4")):
-                if(os.path.isfile("/home/nikhil/Nefarians/UI/Res/videos/video.mp4")):
-                    subprocess.call("sudo rm /home/nikhil/Nefarians/UI/Res/videos/video.mp4",shell=True)
-                os.rename(self.fileName,"/home/nikhil/Nefarians/UI/Res/videos/video.mp4")
+                if(os.path.isfile("{}/videos/video.mp4".format(str(os.getcwd()).replace("\\","/")))):
+                    os.remove("{}/videos/video.mp4".format(str(os.getcwd()).replace("\\","/")))
+                copyfile(self.fileName,"{}/videos/video.mp4".format(str(os.getcwd()).replace("\\","/")))
                 time.sleep(2)
                 self.converter()
             else:

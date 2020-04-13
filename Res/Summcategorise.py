@@ -180,7 +180,7 @@ def theprogramlife(filename):
     def fetchandget(summary):
         category=predict_cat(summary)
         print(category)
-        catfile=open("fakenews.txt","w")
+        catfile=open("category.txt","w")
         catfile.write(category)
         catfile.close()
         myPred.append(category)
